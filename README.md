@@ -5,11 +5,11 @@ This project is a design challenge for a frontend role
 ## Technologies Used
 
 - Reactjs  
-- Scss Module
+- Scss/Scss Module
 
 ### Getting Started
 
-This instructions will get you a copy of the project up and running on your local machine.
+These instructions will get you a copy of the project up and running on your local machine.
 
 1. Clone the repository
 
