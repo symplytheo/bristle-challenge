@@ -1,0 +1,67 @@
+@import '../../styles/colors';
+
+@mixin bg-color($color) {
+  background: fade-out($color, 0.8);
+}
+
+.primary {
+  @include bg-color($primary);
+}
+.success {
+  @include bg-color($success);
+}
+.warning {
+  @include bg-color($warning);
+}
+.error {
+  @include bg-color($error);
+}
+.info {
+  @include bg-color($info);
+}
+.white {
+  @include bg-color($white);
+}
+.black {
+  @include bg-color($black);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+}
+
+.card__info {
+  background: transparent;
+
+  h4 {
+    font-size: 0.625rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  div {
+    font-size: 0.5rem;
+  }
+}
+
+.card__avatars {
+  display: inline-flex;
+  direction: rtl;
+  text-align: left; 
+  padding-left: 35px;
+
+  .avatar {
+    img {
+      border-radius: 50%;
+      position: relative;
+      left: -5px;
+      margin-left: -5px;
+      z-index: 1;
+    }
+  }
+}
