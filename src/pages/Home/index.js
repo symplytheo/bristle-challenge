@@ -22,7 +22,7 @@ export default function Homepage() {
           <TaskCard color="success" title="Projects" items={PROJECTS} />
         </div>
         <div>
-          <TaskCard color="info" title="Deadlines" items={PROJECTS} />
+          <TaskCard color="primary" title="Deadlines" items={PROJECTS} />
         </div>
         <div className={s.todos__action}>
           <h3>Add New</h3>
@@ -34,7 +34,7 @@ export default function Homepage() {
             <PlusIcon /> Project
           </Button>
           <br />
-          <Button color="info">
+          <Button color="primary">
             <PlusIcon /> Deadline
           </Button>
         </div>
@@ -105,24 +105,24 @@ const PROJECTS = [
 ];
 
 const TEAMS = [
-  { name: 'Rachel Brown', role: 'Analyst', avatar: avatar, color: 'gold' },
+  { name: 'Rachel Brown', role: 'Analyst', avatar: avatar, color: 'warning' },
   {
     name: 'Michaela Woodson',
     role: 'Product Lead',
     avatar: avatar,
-    color: 'red',
+    color: 'error',
   },
-  { name: 'John White', role: 'UI/UX Designer', avatar: avatar, color: 'cyan' },
+  { name: 'John White', role: 'UI/UX Designer', avatar: avatar, color: 'info' },
   {
     name: 'Ingrid Bays',
     role: 'Senior Data Engineer',
     avatar: avatar,
-    color: 'orange',
+    color: 'success',
   },
   {
     name: 'Shay Duro',
     role: 'Customer Success Manager',
     avatar: avatar,
-    color: 'navy',
+    color: 'primary',
   },
 ];

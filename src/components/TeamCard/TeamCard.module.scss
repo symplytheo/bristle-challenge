@@ -1,5 +1,8 @@
 @import '../../styles/colors';
 
+@mixin border-color($color) {
+  background: $color;
+}
 
 .card {
   display: flex;
@@ -14,13 +17,35 @@
   border-radius: 0.75rem 0 0 0.75rem;
 }
 
+.primary {
+  @include border-color($primary);
+}
+.success {
+  @include border-color($success);
+}
+.warning {
+  @include border-color($warning);
+}
+.error {
+  @include border-color($error);
+}
+.info {
+  @include border-color($info);
+}
+.white {
+  @include border-color($white);
+}
+.black {
+  @include border-color($black);
+}
+
 .avatar {
   border-radius: 50%;
   background: $grey;
   margin: 0.625rem 0;
 }
 
-.info {
+.card_info {
   padding: 0.625rem;
   h5 {
     font-size: 0.625rem;

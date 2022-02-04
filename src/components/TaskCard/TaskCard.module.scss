@@ -2,7 +2,7 @@
 
 @mixin bg-color($color) {
   background: fade-out($color, 0.8);
-  color: $color;
+  color: darken($color, 20%);
 }
 
 .primary {
