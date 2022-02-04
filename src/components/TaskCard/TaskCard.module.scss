@@ -1,0 +1,113 @@
+@import '../../styles/colors';
+
+@mixin bg-color($color) {
+  background: fade-out($color, 0.8);
+  color: $color;
+}
+
+.primary {
+  @include bg-color($primary);
+}
+.success {
+  @include bg-color($success);
+}
+.warning {
+  @include bg-color($warning);
+}
+.error {
+  @include bg-color($error);
+}
+.info {
+  @include bg-color($info);
+}
+.white {
+  @include bg-color($white);
+}
+.black {
+  @include bg-color($black);
+}
+
+.container {
+  border-radius: 0.875rem;
+  padding: 1rem 1rem 0 1rem;
+  width: 100%;
+
+  & > h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.content {
+  margin-top: 0.75rem;
+  color: $black;
+  overflow-y: auto;
+  height: 254px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.task {
+  padding: 0.5rem;
+  background: $white;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.5rem 5px;
+  transition: margin 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+.task_item__rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  .company {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .company_circle {
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      background: #c4c4c4;
+    }
+
+    h6 {
+      font-size: 0.5rem;
+      font-weight: 500;
+    }
+  }
+}
+.task_item__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.5rem;
+  font-weight: 500;
+
+  .task_item__priority {
+    border-radius: 3px;
+    font-size: 7.5px;
+    padding: 2.5px 0.25rem;
+    text-transform: uppercase;
+  }
+}

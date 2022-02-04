@@ -1,0 +1,24 @@
+@import '../../styles/colors';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.875rem;
+  gap: 2rem;
+
+  svg {
+    cursor: pointer;
+
+    path {
+      fill: $black;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      path {
+        fill: $warning;
+      }
+    }
+  }
+}
