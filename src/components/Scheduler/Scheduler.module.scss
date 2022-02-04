@@ -47,3 +47,28 @@
     }
   }
 }
+
+.content {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  gap: 0.75rem;
+  overflow-y: auto;
+  height: 310px;
+  cursor: pointer;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > div {
+    width: 75%;
+
+    &:nth-child(even) {
+      align-self: flex-end;
+    }
+  }
+}
