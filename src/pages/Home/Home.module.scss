@@ -9,18 +9,20 @@
   h2 {
     font-size: 2rem;
     font-weight: 600;
+    line-height: 44.8px;
   }
 
   div {
     font-size: 0.875rem;
     color: fade-out($black, 0.45);
+    line-height: 19.6px;
   }
 }
 
 .todos__section {
   display: grid;
   gap: 1.875rem;
-  margin: 2rem 0;
+  margin: 30px 0px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 
   & > div {
@@ -55,7 +57,7 @@
 
 .schedule__section {
   background: $white;
-  border-radius: 1rem;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
@@ -65,16 +67,18 @@
   }
 
   .team {
-    padding: 2rem  1rem 1.5rem 1rem;
+    padding: 33px  1rem 1.375rem;
     border-right: 1px solid $grey;
 
     h3 {
       font-size: 1.25rem;
       font-weight: 500;
+      line-height: 1.5rem;
+      margin-left: 5px;
     }
 
     .team__list {
-      margin-top: 1.25rem;
+      margin-top: 1.375rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;

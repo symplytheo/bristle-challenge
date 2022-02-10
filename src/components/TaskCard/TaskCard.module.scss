@@ -29,12 +29,14 @@
 
 .container {
   border-radius: 0.875rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 11px 0 11px;
   width: 100%;
 
   & > h3 {
     font-size: 1.25rem;
     font-weight: 500;
+    line-height: 28px;
+    margin: 0 5px;
   }
 }
 
@@ -42,7 +44,8 @@
   margin-top: 0.75rem;
   color: $black;
   overflow-y: auto;
-  height: 254px;
+  overflow-x: auto;
+  height: 242px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -59,7 +62,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  margin: 0.5rem 5px;
+  margin: 0 5px 0.5rem;
   transition: margin 0.3s ease;
   cursor: pointer;
 
@@ -71,6 +74,7 @@
   h4 {
     font-size: 0.875rem;
     font-weight: 500;
+    line-height: 20px;
   }
 }
 
@@ -94,20 +98,24 @@
     h6 {
       font-size: 0.5rem;
       font-weight: 500;
+      line-height: 0.625rem;
     }
   }
 }
 .task_item__footer {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 0.5rem;
   font-size: 0.5rem;
   font-weight: 500;
+  line-height: 0.625rem;
 
   .task_item__priority {
     border-radius: 3px;
     font-size: 7.5px;
     padding: 2.5px 0.25rem;
     text-transform: uppercase;
+    line-height: 9px;
   }
 }

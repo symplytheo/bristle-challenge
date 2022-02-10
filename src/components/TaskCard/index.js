@@ -9,15 +9,24 @@ const TaskCard = ({ color, title, items }) => {
         {items.map((item, i) => (
           <div key={i} className={s.task}>
             <h4 className={s.task_item__title}>{item.title}</h4>
-            <div className={s.task_item__rating}>
-              <div className={s.company}>
-                <div className={s.company_circle} />
-                <h6>{item.client}</h6>
+            {(item.rating || item.client) && (
+              <div className={s.task_item__rating}>
+                {item.client && (
+                  <div className={s.company}>
+                    <div className={s.company_circle} />
+                    <h6>{item.client}</h6>
+                  </div>
+                )}
+                {item.rating && <RatingIcon />}
               </div>
-              <RatingIcon />
-            </div>
+            )}
             <div className={s.task_item__footer}>
-              <div className={s.task_item__date}>Due on {item.due_date}</div>
+              <div className={s.task_item__date}>
+                Due{' '}
+                {['today', 'tomorrow'].includes(item.due_date)
+                  ? item.due_date
+                  : 'on ' + item.due_date}
+              </div>
               <div
                 className={[
                   s.task_item__priority,

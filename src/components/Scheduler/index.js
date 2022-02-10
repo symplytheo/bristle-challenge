@@ -7,17 +7,17 @@ import avatar4 from '../../assets/images/avatar-4.png';
 import avatar5 from '../../assets/images/avatar-5.png';
 
 const Scheduler = () => {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = today.toLocaleDateString('default', { month: 'long' });
-  const lastDayOfMonth = new Date(year, today.getMonth() + 1, 0).getDate();
-  const dates = Array.from({ length: lastDayOfMonth }, (_, i) => i + 1);
+  let dates = [26, 27, 28, 29, 30];
+  dates = [...dates, ...Array.from({ length: 25 }, (_, i) => i + 1)];
 
   return (
     <div className={s.scheduler}>
       <div className={s.header}>
         <div className={s.date__top}>
-          <div className={s.date__value}>{month + ' ' + year}</div>
+          <div className={s.date__value}>
+            <div>June 2021</div>
+            <div>Jul</div>
+          </div>
           <select value={'month'} onChange={() => {}}>
             <option value="month">Month</option>
           </select>
@@ -27,9 +27,7 @@ const Scheduler = () => {
           {dates.map((x) => (
             <div
               key={x}
-              className={[s.date, x === today.getDate() ? s.active : ''].join(
-                ' '
-              )}
+              className={[s.date, x === 8 ? s.active : ''].join(' ')}
             >
               {`${x < 10 ? '0' : ''}` + x}
             </div>
