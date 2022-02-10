@@ -22,7 +22,7 @@ export default function Homepage() {
           <TaskCard color="success" title="Projects" items={PROJECTS} />
         </div>
         <div>
-          <TaskCard color="primary" title="Deadlines" items={PROJECTS} />
+          <TaskCard color="primary" title="Deadlines" items={DEADLINES} />
         </div>
         <div className={s.todos__action}>
           <h3>Add New</h3>
@@ -68,33 +68,54 @@ const TASKS = [
     title: 'Complete designs for edtech startup project',
     due_date: '08/01/2021',
     priority: 'high',
-    client: 'Acme Inc.',
+    rating: true,
   },
   {
     title: 'Approve timesheet for Jane Applegate',
     due_date: 'tomorrow',
-    priority: 'low',
-    client: 'Acme Inc.',
+    priority: 'medium',
   },
   {
     title: 'Move files & assets to a different cloud service',
     due_date: 'tomorrow',
-    priority: 'medium',
-    client: 'Acme Inc.',
+    priority: 'low',
   },
 ];
 const PROJECTS = [
   {
     title: 'Data migration',
-    due_date: '08/01/2021',
+    due_date: '08/23/2021',
+    priority: 'medium',
+    client: 'Acme Inc.',
+    rating: true,
+  },
+  {
+    title: 'Complete rebranding',
+    due_date: '09/05/2021',
+    priority: 'high',
+    client: 'Fanspeak Services',
+    rating: true,
+  },
+  {
+    title: 'New design concepts',
+    due_date: 'tomorrow',
+    priority: 'medium',
+    client: 'Acme Inc.',
+  },
+];
+const DEADLINES = [
+  {
+    title: 'Data migration',
+    due_date: '08/23/2021',
     priority: 'high',
     client: 'Acme Inc.',
   },
   {
     title: 'Complete rebranding',
-    due_date: 'tomorrow',
+    due_date: '09/05/2021',
     priority: 'low',
-    client: 'Acme Inc.',
+    client: 'Fanspeak Services',
+    rating: true,
   },
   {
     title: 'New design concepts',
